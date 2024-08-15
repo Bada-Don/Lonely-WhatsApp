@@ -38,23 +38,24 @@
 
             <div class="flex flex-row gap-3 w-full justify-between">
                 <div class="flex flex-row gap-3">
-                    <img class="rounded-full size-12" src="<%= chat.profilePic %>" alt="">
+                    <img class="rounded-full size-12 object-cover" src="<%= chat.recieverDP %>" alt="">
                     <div>
                         <h2>
-                            <%= chat.name %>
+                            <%= chat.recieverName %>
                         </h2>
                         <p class="text-slate-500">
-                            <%= chat.lastMsg %>
+                            <%= chat.messages.length > 0 ? chat.messages[chat.messages.length - 1].text : 'No messages yet' %>
                         </p>
+                        
                     </div>
                 </div>
                 <p class="text-slate-500">
-                    <%= chat.date %>
+                    <%= chat.lastSeen %>
                 </p>
             </div>
         </div>
         <br>
         <% }); %>
-
-
 </section>
+
+<script src="/src/app.js"></script>

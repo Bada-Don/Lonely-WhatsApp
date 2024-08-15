@@ -1,4 +1,4 @@
-const Conversation = require('./models/chat');
+const Conversation = require('./models/conversation');
 const mongoose = require('mongoose');
 
 main().then(() => {
@@ -23,14 +23,58 @@ const sampleChat = [{
             text: 'Kaam bhejde',
         }
     ]
+},
+{
+    recieverName: 'Khushi Patel',
+    recieverDP: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?cs=srgb&dl=pexels-anastasia-shuraeva-774909.jpg&fm=jpg',
+    recieverPhone: '+91 98765 43210',
+    messages: [
+        {
+            text: 'Hi',
+        },
+        {
+            text: 'What are you doing?',
+        }
+    ]
+},
+{
+    recieverName: 'Neha Gupta',
+    recieverDP: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-1130626.jpg&fm=jpg',
+    recieverPhone: '+91 87654 32109',
+    messages: [
+        {
+            text: 'Hey',
+        },
+        {
+            text: 'Long time no see!',
+        }
+    ]
+},
+{
+    recieverName: 'Rahul Singh',
+    recieverDP: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?cs=srgb&dl=pexels-stefan-stefancik-91227.jpg&fm=jpg',
+    recieverPhone: '+91 76543 21098',
+    messages: [
+        {
+            text: 'Good evening',
+        },
+        {
+            text: 'How was your day?',
+        }
+    ]
+},
+{
+    recieverName: 'Priyanka Verma',
+    recieverDP: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-733872.jpg&fm=jpg',
+    recieverPhone: '+91 65432 10987',
+    messages: [
+        {
+            text: 'Good morning',
+        },
+        {
+            text: 'How was your night?',
+        }
+    ]
 }];
-
-// sampleChat.save()
-//     .then(savedChat => {
-//         console.log('Successfully saved: \n', savedChat);
-//     })
-//     .catch((error) => {
-//         console.error('Error saving chat: \n', error);
-//     });
 
 Conversation.insertMany(sampleChat);

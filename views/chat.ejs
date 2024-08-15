@@ -1,11 +1,11 @@
 <section class="bg-[#222e35] flex flex-col col-span-4">
     <div class="flex flex-row justify-between items-center ">
         <div class="flex flex-row items-center gap-3 p-2">
-            <img class="size-11 rounded-full"
-                src="<%= chat.recieverDP %>"
-                alt="Profile Photo">
+            <img class="size-11 rounded-full" src="<%= chat.recieverDP %>" alt="Profile Photo">
             <div class="flex flex-col">
-                <h3 class="leading-8 font-bold text-lg"><%= chat.recieverName %></h3>
+                <h3 class="leading-8 font-bold text-lg">
+                    <%= chat.recieverName %>
+                </h3>
                 <p class="text-[#8696a0]">Click here for contact info</p>
             </div>
         </div>
@@ -27,7 +27,18 @@
         </div>
     </div>
     <div
-        class="chat w-full h-full bg-[url('https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail.jpg')]">
+        class="chat flex flex-col-reverse p-2 items-end w-full h-full bg-[url('https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail.jpg')]">
+        <% for( let index=0; index < chat.messages.length; index++ ) { %>
+
+            <div class="message flex flex-col items-end bg-[#005c4b] m-2 w-max px-3 py-1 rounded-md">
+                <p>
+                    <%= chat.messages.length> 0 ? chat.messages[index].text : '' %>
+                </p>
+                <p class="text-slate-300 text-xs">
+                    <%= chat.messages.length> 0 ? chat.messages[index].formattedDate : '' %>
+                </p>
+            </div>
+            <% } %>
 
     </div>
     <div class="textbox bg-[#222e35] flex flex-row px-6 py-2 justify-evenly items-center">

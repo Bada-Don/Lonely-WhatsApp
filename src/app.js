@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     message.addEventListener('input', toggleButtons);
 });
 
-
+// All Unread and Groups Categories logic
 document.addEventListener("DOMContentLoaded", () => {
     const categories = ["All", "Unread", "Groups"];
     
@@ -39,3 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Selected chat logic
+document.addEventListener("DOMContentLoaded", () => {
+    const chats = document.getElementsByClassName('chat');  
+    for(chat of chats){
+        chat.addEventListener('click', () => {
+            chat.classList.toggle('selectedChat');
+            });
+    }
+    });

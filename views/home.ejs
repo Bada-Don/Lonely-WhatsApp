@@ -10,8 +10,8 @@
 <body class="bg-[#2c2c2c] flex flex-row w-[100vw]"> 
     <%- include ("navBar.ejs") %>
     <div class="grid grid-cols-6 w-[100%]">
-        <%- include ("allChats.ejs", { chat: chats }) %>
-        <%- include ("chat.ejs", { chat: chats }) %>
-    </div>
+        <%- include("allChats.ejs", { chat: chats }) %>
+        <%- include("chat.ejs", { chat: activeChat }) %>
+    </div>    
 </body>
 </html>

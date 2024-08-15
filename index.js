@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
-const database = require('./database');
 const conversation = require('./models/conversation');
 const moment = require('moment');
 
@@ -20,20 +19,24 @@ app.get('/', (req, res) => {
         const formattedChat = chats.map(chat => ({
             ...chat._doc,
             lastSeen: moment(chat.lastSeen).format('DD/MM/YYYY'),
-            date: moment(chat.date).format('DD/MM/YYYY')
+            messages: chat.messages.map(message => ({
+                ...message,
+                text: message.text,
+                formattedDate: moment(message.date).format('h:mm A')
+            }))
         }));
-        res.render('home.ejs', { chats: formattedChat });
+        const activeChat = formattedChat[0];
+        res.render('home.ejs', { chats: formattedChat, activeChat });
     });
 });
 
 
+main().then(() => {
+    console.log('Connection Successful');
+}).catch((err) => {
+    console.error('MongoDB connection error:', err);
+});
 
-    main().then(() => {
-        console.log('Connection Successful');
-    }).catch((err) => {
-        console.error('MongoDB connection error:', err);
-    });
-
-    async function main() {
-        await mongoose.connect('mongodb://0.0.0.0:27017/whatsapp');
-    }
+async function main() {
+    await mongoose.connect('mongodb://0.0.0.0:27017/whatsapp');
+}

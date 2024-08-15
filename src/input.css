@@ -26,6 +26,9 @@ body {
     @apply text-[#009c5c];
     background-color: #0a332c !important;
 }
+.selectedChat{
+    background-color: #202c33 !important;
+}
 section {
     border: 1px solid #313d45;
 }

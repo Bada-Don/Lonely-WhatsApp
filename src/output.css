@@ -570,6 +570,14 @@ video {
   grid-column: span 4 / span 4;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -630,6 +638,16 @@ video {
   width: 100%;
 }
 
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -640,6 +658,14 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -686,6 +712,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .bg-\[\#111b21\] {
   --tw-bg-opacity: 1;
   background-color: rgb(17 27 33 / var(--tw-bg-opacity));
@@ -715,13 +745,17 @@ video {
   background-color: transparent;
 }
 
-.bg-\[url\(\'https\:\/\/e1\.pxfuel\.com\/desktop-wallpaper\/461\/478\/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail\.jpg\'\)\] {
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail.jpg');
+.bg-\[\] {
+  background-color: ;
 }
 
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
+.bg-\[\#005c4b\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 92 75 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'https\:\/\/e1\.pxfuel\.com\/desktop-wallpaper\/461\/478\/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail\.jpg\'\)\] {
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/461/478/desktop-wallpaper-whatsapp-dark-whatsapp-chat-thumbnail.jpg');
 }
 
 .object-cover {
@@ -731,6 +765,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-3 {
@@ -758,6 +796,19 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[\#a6abad\] {
+  font-family: #a6abad;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -766,6 +817,11 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -784,6 +840,16 @@ video {
 .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 body {
@@ -819,6 +885,10 @@ body {
   --tw-text-opacity: 1;
   color: rgb(0 156 92 / var(--tw-text-opacity));
   background-color: #0a332c !important;
+}
+
+.selectedChat{
+  background-color: #202c33 !important;
 }
 
 section {
